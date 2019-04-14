@@ -1,6 +1,7 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import PropTypes from "prop-types";
+import { ContactsContext } from "./Store";
 
 function Header({ branding }) {
   return (
@@ -84,24 +85,9 @@ function ContactForm({ addContact }) {
 }
 
 function App() {
-  const [contacts, setContacts] = useState([
-    {
-      name: "Brad Taversy",
-      email: "brad@gmail.com",
-      phone: "111-111-1111"
-    },
-    {
-      name: "Gary Simon",
-      email: "gary@gmail.com",
-      phone: "222-222-2222"
-    },
-    {
-      name: "Code Realm",
-      email: "realm@gmail.com",
-      phone: "333-333-3333"
-    }
-  ]);
+  const [contacts, setContacts] = useContext(ContactsContext);
 
+  console.log(contacts);
   const addContact = name => {
     const newContact = [...contacts, { name }];
     setContacts(newContact);
