@@ -7,11 +7,12 @@ export default function ContactList({ contact, index }) {
   //const [state, dispatch] = useReducer(contactsReducer, contacts);
 
   return (
-    <div>
+    <div className="container card card-body mb-3 ml-6 mr-6">
+      <div className="card-header">Contacts</div>
       {state.contacts.map(contact => {
         const { id, name, email, phone, hidden } = contact;
         return (
-          <div className="card card-body mb-3">
+          <div className="card card-body mb-3 ml-6 mr-6">
             <h4>
               {name}{" "}
               <i
