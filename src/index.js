@@ -19,6 +19,7 @@ function Index() {
   return (
     <Store.Provider value={{ state, dispatch }}>
       <Header />
+      <AddContact />
       <ContactList />
     </Store.Provider>
   );

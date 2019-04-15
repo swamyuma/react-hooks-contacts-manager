@@ -16,11 +16,13 @@ export default function reducer(state, action) {
       };
     }
     case "ADD_CONTACT": {
+      console.log(action.payload);
+      const { name, email, phone } = action.payload;
       const newContact = {
         id: uuid.v4(),
-        name: action.name,
-        email: action.email,
-        phone: action.phone
+        name: name,
+        email: email,
+        phone: phone
       };
       console.log(newContact);
       return {
