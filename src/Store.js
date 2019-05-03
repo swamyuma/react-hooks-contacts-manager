@@ -1,7 +1,7 @@
 import React from "react";
 import uuid from "uuid";
 
-const Store = React.createContext({
+const ContactsContext = React.createContext({
   contacts: [
     {
       id: uuid.v4(),
@@ -34,4 +34,4 @@ const Store = React.createContext({
   ]
 });
 
-export default Store;
+export default ContactsContext;

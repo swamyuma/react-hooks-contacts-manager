@@ -3,7 +3,7 @@ import { render } from "react-dom";
 import App from "./App";
 import Store from "./Store";
 import reducer from "./reducers";
-import { usePersistedContext, usePersistedReducer } from "./usePersist";
+//import { usePersistedContext, usePersistedReducer } from "./usePersist";
 
 import Header from "./Header";
 import ContactList from "./ContactList";

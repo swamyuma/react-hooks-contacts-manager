@@ -1,7 +1,7 @@
 import React, { useState, useContext } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import PropTypes from "prop-types";
-import { ContactsContext } from "./Store";
+import ContactsContext from "./Store";
 
 function Header({ branding }) {
   return (
